@@ -1,0 +1,45 @@
+/* style.css — the page around the Sizzle & Serve canvas. The game itself
+   is drawn on the canvas; this file only centres it on a dark kitchen
+   backdrop and keeps it fitted to the window. */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: #173528;
+  font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+}
+
+.stage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+#game-canvas {
+  width: min(1280px, 100%);
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.45);
+  background: #f6e7c8;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.fallback {
+  max-width: 640px;
+  margin: 14px 0 0;
+  color: #cfe3d6;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
